@@ -1,0 +1,55 @@
+## Ignore Visual Studio / .NET build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+.vs/
+.idea/
+.vscode/
+
+## Test & Coverage Results
+TestResults/
+[Cc]overage/
+*.trx
+*.coverage
+*.coveragexml
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build results & Package files
+*.nupkg
+*.snupkg
+*.appx
+*.appxbundle
+*.msi
+*.mdf
+*.ldf
+
+## OS generated files
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+## Node / Web artifacts (if any)
+node_modules/
+dist/
+
+## Environment / Local Settings
+appsettings.Local.json
+*.local.json
+
+## Documentation / Roadmap
+Roadmap.md
+[Rr]oadmap.md
+memory.md
+Memory.md
+[Mm]emory.md
