@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerPortal.UnitTests", "b
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerPortal.Application", "backend\src\DealerPortal.Application\DealerPortal.Application.csproj", "{CEC875C0-9683-400D-866A-44F0428170FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerPortal.Infrastructure", "backend\src\DealerPortal.Infrastructure\DealerPortal.Infrastructure.csproj", "{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,18 @@ Global
 		{CEC875C0-9683-400D-866A-44F0428170FC}.Release|x64.Build.0 = Release|Any CPU
 		{CEC875C0-9683-400D-866A-44F0428170FC}.Release|x86.ActiveCfg = Release|Any CPU
 		{CEC875C0-9683-400D-866A-44F0428170FC}.Release|x86.Build.0 = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|x64.Build.0 = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +85,6 @@ Global
 		{F57642F3-C37C-D174-720E-6A6AAD5BEE22} = {1AE8ACA6-933B-BF2A-3671-3E2EAC007D16}
 		{69C6DE5B-BA53-424A-B21A-CAD7BB6ACC03} = {F57642F3-C37C-D174-720E-6A6AAD5BEE22}
 		{CEC875C0-9683-400D-866A-44F0428170FC} = {0F9113EE-888A-26D2-68B0-4A7D0A2A8745}
+		{9C63FC8D-06C1-45D0-850C-D833F9CBBE0E} = {0F9113EE-888A-26D2-68B0-4A7D0A2A8745}
 	EndGlobalSection
 EndGlobal
