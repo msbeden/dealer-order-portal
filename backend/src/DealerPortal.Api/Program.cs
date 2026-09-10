@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -111,6 +112,11 @@ app.UseMiddleware<ProblemDetailsMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(options =>
+    {
+        options.WithTitle("Bayi Sipariş Portalı API")
+               .WithTheme(Scalar.AspNetCore.ScalarTheme.Moon);
+    });
 }
 
 app.UseCors("AllowFrontend");
