@@ -42,6 +42,7 @@ Thumbs.db
 ## Node / Web artifacts (if any)
 node_modules/
 dist/
+.angular/
 
 ## Environment / Local Settings
 appsettings.Local.json
@@ -50,6 +51,8 @@ appsettings.Local.json
 ## Documentation / Roadmap
 Roadmap.md
 [Rr]oadmap.md
-memory.md
-Memory.md
 [Mm]emory.md
+[Mm]emory.md
+MEMORY.md
+MEMOERY.md
+
