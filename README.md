@@ -134,6 +134,14 @@ Portalı yüksek hacimli veri altında (200.000+ ürün, 500.000+ sipariş satı
 dotnet run --project tools/DealerPortal.Seeder
 ```
 
+Ayrıntılı execution plan analizleri, önce/sonra süreleri ve covering index sonuçları için [docs/performance.md](file:///d:/c_projects/dealer-order-portal/docs/performance.md) raporunu inceleyiniz.
+
+---
+
+## 📑 Mimari Karar Kayıtları (ADR)
+
+Projede uygulanan temel mimari kararlar (Çok kiracılı strateji, Optimistic Concurrency, Domain Durum Makinesi, Angular Signals ve LLM Veri Gizliliği) için [docs/architecture-decisions.md](file:///d:/c_projects/dealer-order-portal/docs/architecture-decisions.md) dokümanına başvurabilirsiniz.
+
 ---
 
 ## 📦 Proje Dizin Yapısı
