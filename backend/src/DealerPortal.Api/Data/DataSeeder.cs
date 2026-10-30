@@ -115,21 +115,24 @@ public static class DataSeeder
         }
 
         // 8. Seed Dealer User
-        var dealerEmail = "dealer@dealerportal.com";
-        var dealerUser = await userManager.FindByEmailAsync(dealerEmail);
-        if (dealerUser is null)
+        var dealerEmails = new[] { "dealer@dealerportal.com", "dealer1@dealerportal.com" };
+        foreach (var email in dealerEmails)
         {
-            dealerUser = new AppUser
+            var dealerUser = await userManager.FindByEmailAsync(email);
+            if (dealerUser is null)
             {
-                UserName = dealerEmail,
-                Email = dealerEmail,
-                FullName = "Mehmet Bayi Yetkilisi",
-                TenantId = tenant.Id,
-                DealerId = dealer.Id,
-                EmailConfirmed = true
-            };
-            await userManager.CreateAsync(dealerUser, "Dealer123!");
-            await userManager.AddToRoleAsync(dealerUser, "Dealer");
+                dealerUser = new AppUser
+                {
+                    UserName = email,
+                    Email = email,
+                    FullName = "Mehmet Bayi Yetkilisi",
+                    TenantId = tenant.Id,
+                    DealerId = dealer.Id,
+                    EmailConfirmed = true
+                };
+                await userManager.CreateAsync(dealerUser, "Dealer123!");
+                await userManager.AddToRoleAsync(dealerUser, "Dealer");
+            }
         }
     }
 }

@@ -74,7 +74,7 @@ import { AuthService } from '../../core/services/auth.service';
               label="Bayi (Dealer)"
               icon="pi pi-user"
               class="p-button-outlined p-button-sm p-button-success"
-              (click)="quickLogin('dealer1@dealerportal.com', 'Dealer123!')"
+              (click)="quickLogin('dealer@dealerportal.com', 'Dealer123!')"
             ></button>
             <button
               pButton
