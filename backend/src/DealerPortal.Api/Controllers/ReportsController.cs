@@ -42,14 +42,14 @@ public class ReportsController : ControllerBase
     {
         var topProducts = await _dbContext.InvoiceLines
             .AsNoTracking()
-            .GroupBy(l => new { l.ProductId, l.ProductName, l.Sku })
+            .GroupBy(l => l.ProductId)
             .Select(g => new
             {
-                g.Key.ProductId,
-                g.Key.ProductName,
-                g.Key.Sku,
+                ProductId = g.Key,
+                ProductName = g.Max(l => l.ProductName),
+                Sku = g.Max(l => l.Sku),
                 TotalQuantity = g.Sum(l => l.Quantity),
-                TotalGross = g.Sum(l => l.LineTotalGross)
+                TotalGross = g.Sum(l => l.Quantity * l.UnitPrice * (1 + l.VatRate / 100m))
             })
             .OrderByDescending(p => p.TotalGross)
             .Take(limit)
