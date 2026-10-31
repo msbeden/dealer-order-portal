@@ -54,23 +54,23 @@ public class FakeOrderInsightService : IOrderInsightService
 
         var trend = totalOrders switch
         {
-            > 10 => "Ascending (+24% order frequency compared to previous period)",
-            > 3 => "Stable (Consistent repeat purchase behavior)",
-            _ => "Low activity (Infrequent purchase cycle detected)"
+            > 10 => "Yükselişte (Önceki döneme göre +%24 sipariş sıklığı)",
+            > 3 => "Dengeli (İstikrarlı tekrar satın alma davranışı)",
+            _ => "Düşük Aktivite (Seyrek sipariş döngüsü tespit edildi)"
         };
 
-        var summary = $"Dealer {dealer.Name} ({dealer.City}) generated a gross order turnover of {totalRevenue:C} across {totalOrders} orders in the last 90 days. " +
-                      $"Remaining credit limit is {dealer.AvailableCredit:C}. Purchase frequency reflects a {trend.ToLowerInvariant()} pattern.";
+        var summary = $"{dealer.Name} ({dealer.City}) bayisi son 90 günde {totalOrders} sipariş ile toplam {totalRevenue:C} tutarında brüt sipariş cirosu oluşturdu. " +
+                      $"Kalan kredi limiti: {dealer.AvailableCredit:C}. Satın alma sıklığı eğilimi: {trend}.";
 
         var actions = new List<string>
         {
             dealer.AvailableCredit < (dealer.CreditLimit * 0.2m)
-                ? "Credit limit utilization is high (>80%). Evaluate for risk or consider limit revision."
-                : "Credit capacity is healthy; open for bulk ordering promotions.",
+                ? "Kredi limiti kullanımı yüksek (>%80). Risk değerlendirmesi yapın veya limit artırımını değerlendirin."
+                : "Kredi kapasitesi sağlıklı; toplu sipariş kampanyaları için uygun durumda.",
             categoryStats.Count > 0
-                ? $"Primary purchasing focus is in '{categoryStats[0].CategoryName}'. Recommend targeted catalog cross-sells."
-                : "Encourage first seasonal order with catalog highlights.",
-            "Schedule proactive contact prior to upcoming billing period."
+                ? $"Öncelikli satın alma odağı '{categoryStats[0].CategoryName}' kategorisinde. Hedefe yönelik katalog çapraz satışı önerilir."
+                : "Öne çıkan ürün kataloglarıyla ilk sezonluk siparişi teşvik edin.",
+            "Yaklaşan fatura dönemi öncesinde bayi ile proaktif iletişime geçin."
         };
 
         return new DealerInsightDto(
