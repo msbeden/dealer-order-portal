@@ -149,12 +149,6 @@ Ayrıntılı execution plan analizleri, önce/sonra süreleri ve covering index 
 
 ---
 
-## 📑 Mimari Karar Kayıtları (ADR)
-
-Projede uygulanan temel mimari kararlar (Çok kiracılı strateji, Optimistic Concurrency, Domain Durum Makinesi, Angular Signals ve LLM Veri Gizliliği) için [docs/architecture-decisions.md](docs/architecture-decisions.md) dokümanına başvurabilirsiniz.
-
----
-
 ## 📦 Proje Dizin Yapısı
 
 ```
