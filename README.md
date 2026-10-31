@@ -132,7 +132,6 @@ dotnet test
 ### Öne Çıkan Test Kapsamları:
 
 - **`OrderStateMachineTests`:** Taslak halindeki siparişe kalem ekleme, onaylama ve ret adımlarındaki durum makinesi geçiş doğrulamaları.
-- **`CreditLimitEnforcementTests`:** Cari bakiye + yeni sipariş toplamının kredi limitini aştığı durumlarda `DomainException` fırlatılmasının testi.
 - **`TenantIsolationTests`:** Bir kiracının (Tenant A) başka bir kiracının (Tenant B) sipariş veya bayi verisine kesinlikle erişemediğinin doğrulanması.
 
 ---
@@ -144,8 +143,6 @@ Portalı yüksek hacimli veri altında (200.000+ ürün, 500.000+ sipariş satı
 ```bash
 dotnet run --project tools/DealerPortal.Seeder
 ```
-
-Ayrıntılı execution plan analizleri, önce/sonra süreleri ve covering index sonuçları için [docs/performance.md](docs/performance.md) raporunu inceleyiniz.
 
 ---
 
